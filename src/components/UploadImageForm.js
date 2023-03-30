@@ -25,9 +25,7 @@ export default function UploadImageForm(handleCaption) {
             setError(true)
             }
     }
-    const caption={
-      text:"This is a captionnnnnn"
-    };
+   
 
   return (
     <div>
@@ -49,10 +47,7 @@ export default function UploadImageForm(handleCaption) {
                         </div>
                         )}
                     </div>
-                    {preview && <div style={{display:"flex",alignItems:"center", justifyContent:"center"}}>
-                    <button className='remove-btn' onClick={()=>setPreview(null)}>Remove Image</button>
-                    <button className='caption-cta-btn'onClick={(e)=>handleCaption(caption)} >Generate Caption</button>
-                     </div>}
+                   
             </div>
         </form>
     </div>
