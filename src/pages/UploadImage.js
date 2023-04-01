@@ -54,13 +54,12 @@ export default function UploadImage() {
     let response = await axios.post(url,uploaded_file,config)
     .then(res=>{
       setLoading(false)
-      setCaption(res)
+      setCaption(p=>res.data)
         console.log(res)
     }).catch(err=>{
         console.log(err)
     })
-    console.log(response) 
-    setCaption(response)   
+   
   
   
   }
@@ -113,7 +112,7 @@ export default function UploadImage() {
           <GoInfo style={{ marginRight: "10px", fontWeight: "bold" }} />
           Generated caption
         </button>
-        <p  className="caption-textarea">caption: {caption}</p>
+        <p  className="caption-textarea">{caption}</p>
       </div>
       
     </div>
